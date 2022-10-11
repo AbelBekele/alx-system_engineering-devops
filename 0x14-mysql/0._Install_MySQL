@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Cleanup current MySQL installation
+#apt-get purge mysql-server mysql-client mysql-common mysql-server-core-* mysql-client-core-*
+#rm -rf /etc/mysql /var/lib/mysql
+#apt-get autoremove
+#apt-get autoclean
+
+ # Dependencies might be different on other systems...
+sudo apt install libaio1
+sudo apt install libmecab2
+sudo apt install libtinfo5
+
+# Download MySQL, for other versions visit: https://downloads.mysql.com/archives/community/
+wget https://downloads.mysql.com/archives/get/p/23/file/mysql-server_5.7.30-1ubuntu18.04_amd64.deb-bundle.tar
+tar -xf mysql-server_5.7.30-1ubuntu18.04_amd64.deb-bundle.tar
+
+sudo dpkg -i mysql-common_5.7.30-1ubuntu18.04_amd64.deb
+sudo dpkg -i libmysqlclient20_5.7.30-1ubuntu18.04_amd64.deb
+#dpkg -i libmysqlclient-dev_5.7.30-1ubuntu18.04_amd64.deb
+#dpkg -i libmysqld-dev_5.7.30-1ubuntu18.04_amd64.deb
+#dpkg -i mysql-community-source_5.7.30-1ubuntu18.04_amd64.deb
+sudo dpkg -i mysql-community-client_5.7.30-1ubuntu18.04_amd64.deb
+sudo dpkg -i mysql-client_5.7.30-1ubuntu18.04_amd64.deb
+sudo dpkg -i mysql-community-server_5.7.30-1ubuntu18.04_amd64.deb
+sudo dpkg -i mysql-server_5.7.30-1ubuntu18.04_amd64.deb
+#dpkg -i mysql-community-test_5.7.30-1ubuntu18.04_amd64.deb
+#dpkg -i mysql-testsuite_5.7.30-1ubuntu18.04_amd64.deb
+sudo dpkg -i libmysqlclient20_5.7.30-1ubuntu18.04_amd64.deb

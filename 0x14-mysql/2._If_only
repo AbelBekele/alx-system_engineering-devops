@@ -1,0 +1,7 @@
+CREATE DATABASE tyrell_corp;
+GRANT SELECT ON tyrell_corp.* TO 'holberton_user'@'localhost';
+FLUSH PRIVILEGES;
+USE tyrell_corp;
+CREATE TABLE nexus6(id INT NOT NULL,name VARCHAR(30) NOT NULL);
+DESCRIBE nexus6;
+INSERT INTO nexus6 VALUE ("1" , "Leon");
